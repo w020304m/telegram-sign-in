@@ -28,4 +28,4 @@ jobs:
         API_HASH: ${{ secrets.API_HASH }}
         BOT_USERNAME: ${{ secrets.BOT_USERNAME }}
       run: |
-        python your_script.py  # 确保替换为你脚本的实际路径
+        python qinadoa.py  # 确保替换为你脚本的实际路径
