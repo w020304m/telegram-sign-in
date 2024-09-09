@@ -24,14 +24,14 @@ jobs:
 
     - name: Print environment variables
       run: |
-        echo "API_ID=${{ vars.API_ID }}"
-        echo "API_HASH=${{ vars.API_HASH }}"
-        echo "BOT_USERNAME=${{ vars.BOT_USERNAME }}"
+        echo "API_ID=${{ secrets..API_ID }}"
+        echo "API_HASH=${{ secrets..API_HASH }}"
+        echo "BOT_USERNAME=${{ secrets..BOT_USERNAME }}"
 
     - name: Run Pyrogram script
       env:
-        API_ID: ${{ vars.API_ID }}
-        API_HASH: ${{ vars.API_HASH }}
-        BOT_USERNAME: ${{ vars.BOT_USERNAME }}
+        API_ID: ${{ secrets..API_ID }}
+        API_HASH: ${{ secrets..API_HASH }}
+        BOT_USERNAME: ${{ secrets..BOT_USERNAME }}
       run: |
         python qinadoa.py
