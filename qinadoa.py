@@ -6,9 +6,10 @@ from pyrogram.types import InlineKeyboardMarkup
 api_id = os.environ.get("API_ID")  # 从环境变量读取 API ID
 api_hash = os.environ.get("API_HASH")  # 从环境变量读取 API Hash
 bot_username = os.environ.get("BOT_USERNAME")  # 从环境变量读取机器人的用户名
+bot_token = os.environ.get("BOT_TOKEN") #自己机器人的token
 
 # 创建 Pyrogram 客户端
-app = Client("my_account", api_id=api_id, api_hash=api_hash)
+app = Client("my_bot", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
 
 # 定义一个异步函数，用于签到
 async def sign_in():
