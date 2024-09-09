@@ -22,10 +22,16 @@ jobs:
       run: |
         pip install pyrogram tgcrypto
 
+    - name: Print environment variables
+      run: |
+        echo "API_ID=${{ vars.API_ID }}"
+        echo "API_HASH=${{ vars.API_HASH }}"
+        echo "BOT_USERNAME=${{ vars.BOT_USERNAME }}"
+
     - name: Run Pyrogram script
       env:
         API_ID: ${{ vars.API_ID }}
         API_HASH: ${{ vars.API_HASH }}
         BOT_USERNAME: ${{ vars.BOT_USERNAME }}
       run: |
-        python qinadoa.py  # 确保替换为你脚本的实际路径
+        python qinadoa.py
