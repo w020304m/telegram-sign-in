@@ -3,9 +3,9 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup
 
 # 从环境变量中读取 API ID、API HASH 和 Bot 用户名
-api_id = int(os.getenv("API_ID"))  # 从环境变量读取 API ID
-api_hash = os.getenv("API_HASH")  # 从环境变量读取 API Hash
-bot_username = os.getenv("BOT_USERNAME")  # 从环境变量读取机器人的用户名
+api_id = os.environ.get("API_ID")  # 从环境变量读取 API ID
+api_hash = os.environ.get("API_HASH")  # 从环境变量读取 API Hash
+bot_username = os.environ.get("BOT_USERNAME")  # 从环境变量读取机器人的用户名
 
 # 创建 Pyrogram 客户端
 app = Client("my_account", api_id=api_id, api_hash=api_hash)
