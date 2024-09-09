@@ -26,6 +26,7 @@ jobs:
       run: |
         echo "API_ID=${{ secrets.API_ID }}"
         echo "API_HASH=${{ secrets.API_HASH }}"
+        echo "BOT_TOKEN=${{ secrets.BOT_TOKEN }}"
         echo "BOT_USERNAME=${{ secrets.BOT_USERNAME }}"
 
     - name: Run Pyrogram script
@@ -33,5 +34,6 @@ jobs:
         API_ID: ${{ secrets.API_ID }}
         API_HASH: ${{ secrets.API_HASH }}
         BOT_USERNAME: ${{ secrets.BOT_USERNAME }}
+        BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
       run: |
         python qinadoa.py
