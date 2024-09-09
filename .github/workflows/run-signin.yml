@@ -3,7 +3,7 @@ name: Run Pyrogram Script
 on:
   push:
     branches:
-      - main
+      - main 
 
 jobs:
   run-script:
